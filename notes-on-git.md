@@ -242,7 +242,7 @@ Let's walk through an example scenario:
    git commit -m "Implement new feature"
    ```
 
-3. **Switch to Main, Merge Feature Branch:**
+3. **Switch to Bookstore, Merge Feature Branch:**
    ```bash
    git switch main
    git merge feature-branch
@@ -260,7 +260,7 @@ Let's walk through an example scenario:
    git commit -m "Another feature implementation"
    ```
 
-6. **Rebase Another Feature Branch onto Main:**
+6. **Rebase Another Feature Branch onto Bookstore:**
    ```bash
    git switch another-feature-branch
    git rebase main
