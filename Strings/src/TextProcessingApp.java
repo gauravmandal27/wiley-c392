@@ -1,6 +1,4 @@
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class TextProcessingApp {
     public static void main(String[] args) {
@@ -41,11 +39,11 @@ public class TextProcessingApp {
     private static String removeDuplicates(String text) {
         String[] S = text.split(" ");
         String result="";
-        List<String> set= new Set<>();
+        Set<String> set= new HashSet<>();
         for(String s:S){
-            if(!set.contains(s)) {
-                result=result.concat(s);
-                set.add(s);
+            if(!set.contains(s.toLowerCase())) {
+                result=result.concat(" "+s);
+                set.add(s.toLowerCase());
             }
         }
         return result;
