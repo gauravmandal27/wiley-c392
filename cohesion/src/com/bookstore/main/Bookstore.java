@@ -1,6 +1,9 @@
 package com.bookstore.main;
 import com.bookstore.model.Book;
 import com.bookstore.service.*;
+
+import static com.bookstore.service.SerializationExample.deSerializeObject;
+
 // Bookstore class representing the main application
 public class Bookstore {
     public static void main(String[] args) {
@@ -14,7 +17,7 @@ public class Bookstore {
         inventory.addBook(new Book("title3","neil",2660));
         inventory.addBook(new Book("title8","neil",254));
         inventory.addBook(new Book("title5","william",199));
-        inventory.displayInventory();
+        inventory.display();
 
         // Add books to inventory
         ShoppingCart shoppingCart = new ShoppingCart();
@@ -26,8 +29,16 @@ public class Bookstore {
         // Add books to shopping cart
 
         // Display inventory and total price of items in shopping cart
-        shoppingCart.displayItems();
+        shoppingCart.display();
         System.out.println(shoppingCart.calculateTotalPrice());
 
+
+        System.out.println("Before Serialization");
+        System.out.println(shoppingCart);
+        SerializationExample.serializeObject(shoppingCart);
+
+        shoppingCart = (ShoppingCart) SerializationExample.deSerializeObject("shoppingCart.ser");
+        System.out.println("After Serialization");
+        System.out.println(shoppingCart);
     }
 }

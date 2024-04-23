@@ -1,7 +1,9 @@
 package com.bookstore.model;
 
+import java.io.Serializable;
+
 // Book class representing a book entity
-public class Book{
+public class Book implements Serializable {
     private String title;
     private String author;
     private double price;

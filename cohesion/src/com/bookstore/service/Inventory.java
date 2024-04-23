@@ -3,7 +3,7 @@ import com.bookstore.model.Book;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Inventory implements {
+public class Inventory implements Service {
     private static List<Book> books = new ArrayList<>();
 
 // Methods related to inventory management
@@ -16,7 +16,7 @@ public class Inventory implements {
         books.remove(book);
     }
 
-    public void displayInventory() {
+    public void display() {
         System.out.println("The Book inventory has the following Books");
         System.out.println(books.toString());
     }

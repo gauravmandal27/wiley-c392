@@ -1,11 +1,12 @@
 package com.bookstore.service;
 import com.bookstore.model.Book;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 // ShoppingCart class representing the shopping cart component
-public class ShoppingCart {
+public class ShoppingCart implements Service, Serializable {
     private List<Book> items = new ArrayList<Book>();
     static double totalPrice;
     // Methods related to shopping cart
@@ -24,9 +25,15 @@ public class ShoppingCart {
         totalPrice-=book.getPrice();
     }
 
-    public void displayItems() {
+    public void display() {
         System.out.println("The Shopping Cart has the following Items");
         System.out.println(items);
     }
 
+    @Override
+    public String toString() {
+        return "ShoppingCart{" +
+                "items=" + items +
+                '}';
+    }
 }
