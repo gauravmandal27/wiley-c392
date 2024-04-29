@@ -1,5 +1,3 @@
-package threadsynchronization;
-
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -50,7 +48,7 @@ class MyDepositThread extends Thread {
     }
 }
 
-public class ThreadSynchronizationWithLock {
+public class ThreadSynchronizationLocks {
 
     public static void main(String[] args) {
         MyBankAccount account = new MyBankAccount(0);

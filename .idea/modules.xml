@@ -3,6 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/1.iml" filepath="$PROJECT_DIR$/1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EmailParsing/EmailParsing.iml" filepath="$PROJECT_DIR$/EmailParsing/EmailParsing.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FileStreams/FileStreams.iml" filepath="$PROJECT_DIR$/FileStreams/FileStreams.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Strings/Strings.iml" filepath="$PROJECT_DIR$/Strings/Strings.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ToDoApp/ToDoApp.iml" filepath="$PROJECT_DIR$/ToDoApp/ToDoApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/cohesion/cohesion.iml" filepath="$PROJECT_DIR$/cohesion/cohesion.iml" />
       <module fileurl="file://$PROJECT_DIR$/idea-java-workspace/employee-hierarchy/employee-hierarchy.iml" filepath="$PROJECT_DIR$/idea-java-workspace/employee-hierarchy/employee-hierarchy.iml" />
       <module fileurl="file://$PROJECT_DIR$/idea-java-workspace/exception-handling/exception-handling.iml" filepath="$PROJECT_DIR$/idea-java-workspace/exception-handling/exception-handling.iml" />

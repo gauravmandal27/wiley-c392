@@ -9,12 +9,14 @@ public class EmailParsing {
 
         String[] emails = str.split(",");
         Map<String, List<String>> map = new HashMap<>();
-
+        int maxItems=0;
         for(String email: emails) {
             email = email.strip();
             String domain = email.substring(email.indexOf('@')+1);
             List<String> set = map.getOrDefault(domain, new ArrayList<>());
             set.add(email);
+            maxItems=Integer.max(maxItems,set.size());
+            System.out.println(maxItems);
             map.put(domain, set);
         }
 
@@ -28,7 +30,7 @@ public class EmailParsing {
         List<List<String>> emailsList = new ArrayList<>(map.values());
 
 
-        for(int i=0; i<3; i++){
+        for(int i=0; i<maxItems; i++){
             for (List<String> strings : emailsList) {
                 String email = i < strings.size() ? strings.get(i) : "";
                 System.out.printf("%-30s", email);
